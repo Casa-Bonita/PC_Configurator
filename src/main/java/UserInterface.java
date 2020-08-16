@@ -50,6 +50,11 @@ public class UserInterface {
 
                 try{
                     length = Integer.parseInt(input);
+                    if(length <= 0){
+                        System.out.println("Некорретный ввод, введена отрицательная или нулевая размерность.");
+                        return;
+                    }
+
                     System.out.println("Размер массива = " + length);
 
                     Operation operation = new Operation(length);
